@@ -1,14 +1,27 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
+import {Home_} from '../views';
+
+/* components */
+import {Drawer_} from '../components';
+
+const Stack = createStackNavigator();
+
 const Navigation = () => {
   return (
-    <View>
-      <Text>Navigation</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={Home_}
+          options={{
+            title: 'FuNotes',
+          }}></Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
