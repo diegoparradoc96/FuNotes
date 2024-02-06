@@ -167,7 +167,7 @@ const Home_ = () => {
 
 const styles = StyleSheet.create({
   section: {
-    color: '#01579B',    
+    color: '#01579B',
     borderColor: 'grey',
     paddingLeft: 8,
     fontSize: 14,
