@@ -12,7 +12,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 /* paper */
 import {IconButton} from 'react-native-paper';
 /* components */
-import {} from '../components';
+import {AddBookModal_} from '../components';
 /* types */
 import {IBook, INote} from '../common/types';
 
@@ -155,13 +155,16 @@ const Home_ = () => {
   );
 
   return (
-    <DrawerLayoutAndroid
-      ref={drawer}
-      drawerWidth={380}
-      drawerPosition="left"
-      renderNavigationView={drawerView}>
-      {/* aqui van a ir los apuntes que se desean guardar */}
-    </DrawerLayoutAndroid>
+    <>
+      <DrawerLayoutAndroid
+        ref={drawer}
+        drawerWidth={380}
+        drawerPosition="left"
+        renderNavigationView={drawerView}>
+        {/* aqui van a ir los apuntes que se desean guardar */}
+      </DrawerLayoutAndroid>
+      <AddBookModal_ visible={true} />
+    </>
   );
 };
 
